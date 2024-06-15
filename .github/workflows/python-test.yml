@@ -41,6 +41,8 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r dev-requirements.txt; fi
 
+
+
     - name: Test with pytest
       run: |
         pytest
@@ -48,3 +50,11 @@ jobs:
     - name: Linting
       run: |
         pre-commit run --all-files
+
+
+    - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Perform Docker Build Dry Run
+        run: |
+          docker build --dry-run -t your-image-name .
