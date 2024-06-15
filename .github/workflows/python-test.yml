@@ -48,4 +48,3 @@ jobs:
     - name: Linting
       run: |
         pre-commit run --all-files
-
