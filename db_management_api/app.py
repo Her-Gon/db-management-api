@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 
-
 APP_NAME = "postgres-manager-api"
 
 app = FastAPI(title="Database Manager API", description="API for postgres management")
