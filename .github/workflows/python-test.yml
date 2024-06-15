@@ -45,3 +45,7 @@ jobs:
       run: |
         pytest
 
+    - name: Linting
+      run: |
+        pre-commit run --all-files
+
