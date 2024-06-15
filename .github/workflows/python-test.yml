@@ -28,7 +28,7 @@ jobs:
         python-version: [3.11]
 
     env:
-      MODE: "dev"
+      FOO: ${{ secrets.FOO }}
 
     steps:
     - uses: actions/checkout@v4
